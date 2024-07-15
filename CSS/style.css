@@ -1,0 +1,147 @@
+/* ----------------- variables ---------------------- */
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("/assets/fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+
+:root {
+  --primary: hsl(4, 100%, 67%);
+  --dark-slate: hsl(235, 18%, 26%);
+  --grey: Grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  --regular: 'Roboto-Regular', sans-serif;
+  --bold: 'Roboto-Bold',sans-serif;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+}
+
+/* ---------------- fonts ------------------- */
+
+h1 {
+  font-size: calc((2rem) + 1.3vw);
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 0.75rem;
+}
+
+h1, h2 {
+  font-family: var(--bold);
+}
+
+li, p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* -------------------- form ----------------------------------- */
+
+form {
+  background-color: var(--white);
+  height: 100vh;
+}
+
+
+/* ----------------------------- content elements -------------------- */
+
+ul {
+  margin: 2rem 0 2rem;
+}
+
+ul li {
+  margin-bottom: 0.75rem; /* Adjust spacing between list items */
+  display: flex;
+  align-items: flex-start; /* Align items at the top of the flex container */
+}
+
+ul li::before {
+  content: url('/assets/images/icon-list.svg'); /* Path to your SVG icon */
+  width: 20px; /* Adjust icon width */
+  height: auto;
+  margin-right: 1.125rem; /* Adjust spacing between icon and text */
+}
+
+input {
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--regular);
+}
+
+button {
+  background-color: var(--dark-slate);
+  color: var(--white);
+  font-family: var(--bold);
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* --------------------- Alignments ------------------------ */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5% 0 5%;
+}
+
+.subscribe {
+  text-wrap: nowrap;
+}
+/* --------------------- Breakpoints ------------------------ */
+
+@media only screen and (min-width: 320px) {
+  #mobile-img {
+    display: block;
+    width: 100%;
+  }
+
+  #desktop-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  #mobile-img {
+    display: none;
+  }
+
+  form{
+    background-color: var(--white);
+    border-radius: 16px;
+  }
+
+  #desktop-img {
+    display: block;
+    max-height: 100%;
+    margin: 1.25rem;
+  }
+
+  form {
+    margin: 20%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
