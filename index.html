@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="/CSS/reset.css">
   <link rel="stylesheet" href="/CSS/style.css">
-
+  <script src="/Script/script.js"></script>
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,7 +15,7 @@
 <body>
 
   <!-- Sign-up form start -->
-  <form action="">
+  <form action="" id="form">
     <img id="desktop-img" src="/assets/images/illustration-sign-up-desktop.svg" alt="">
     <img id="mobile-img" src="/assets/images/illustration-sign-up-mobile.svg" alt="">
 
@@ -30,12 +30,13 @@
         <li>And much more!</li>
       </ul>
 
-      <label for="email"><h2>Email address</h2></label>
-      <input type="email" name="email" id="email" placeholder="email@company.com">
-      <button>
-        <p class="subscribe">Subscribe to monthly newsletter</p>
-      </button>
-
+      <div class="input-fields">
+        <label for="email"><h2>Email address</h2></label>
+        <input type="email" name="email" id="email" placeholder="email@company.com" required>
+        <button>
+          <p class="subscribe">Subscribe to monthly newsletter</p>
+        </button>
+      </div>
     </section>
   </form>
 
