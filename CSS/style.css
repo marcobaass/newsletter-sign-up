@@ -52,6 +52,7 @@ form {
 }
 
 
+
 /* ----------------------------- content elements -------------------- */
 
 ul {
@@ -92,6 +93,11 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.label-error {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* --------------------- Alignments ------------------------ */
@@ -263,5 +269,164 @@ button:hover {
     height: 100vh; /* Ensure body takes full viewport height */
     margin: 0; /* Remove default margin */
     background-color: rgb(56, 56, 56); /* Ensure background color covers full viewport */
+  }
+}
+
+/* -------------- success ------------------- */
+
+.success {
+  display: flex;
+  flex-direction: column;
+  padding: 0 7%;
+  height: 100vh;
+}
+
+.success img {
+  max-width: 18%;
+  margin-top: 40%;
+}
+
+.success h1 {
+  font-size: calc((2.25rem) + 1.3vw);
+  margin-top: 12%;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.success p {
+  margin-top: 8%;
+}
+
+.success p span{
+  font-weight: 900;
+}
+
+#dismiss {
+  margin-top: auto;
+  margin-bottom: 12%;
+}
+
+#dismiss:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, rgb(233, 28, 28), rgb(255, 72, 0));
+}
+
+.hide {
+  display: none;
+}
+
+/* ----------- media queries success --------------- */
+
+/* ---phone landscape--- */
+
+@media only screen and (max-width: 915px) and (orientation: landscape) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .success {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 7%;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .success img {
+    max-width: 12%;
+    margin-right: 30%;
+    margin-top: 4%;
+    flex-basis: 100%;
+  }
+
+  .success h1 {
+    font-size: calc((2.25rem) + 1.3vw);
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .success p {
+    margin-top: 2%;
+  }
+
+  .success p span{
+    font-weight: 900;
+  }
+
+  #dismiss {
+    margin-top: auto;
+    margin-bottom: 4%;
+    padding: 12px 24px;
+  }
+
+  #dismiss:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(233, 28, 28), rgb(255, 72, 0));
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+/* ---iPad--- */
+
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .success {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 7%;
+    height: 90vh;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+  }
+
+  .success img {
+    max-width: 12%;
+    margin-right: 30%;
+    margin-top: 4%;
+    flex-basis: 100%;
+  }
+
+  .success h1 {
+    font-size: calc((2.25rem) + 1.3vw);
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .success p {
+    margin-top: 2%;
+  }
+
+  .success p span{
+    font-weight: 900;
+  }
+
+  #dismiss {
+    margin-top: auto;
+    margin-bottom: 4%;
+    padding: 12px 24px;
+  }
+
+  #dismiss:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(233, 28, 28), rgb(255, 72, 0));
+  }
+
+  .hide {
+    display: none;
   }
 }
