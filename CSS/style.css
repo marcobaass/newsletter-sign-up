@@ -510,3 +510,17 @@ button:hover {
     cursor: pointer;
   }
 }
+
+@media only screen and (min-width: 1500px) {
+  .success {
+    padding: 0 3%;
+  }
+
+}
+
+@media only screen and (min-width: 1800px) {
+  .success {
+    padding: 0 1%;
+  }
+
+}
